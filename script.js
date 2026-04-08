@@ -1,6 +1,8 @@
 const text = "Hi bbi iêu 💖\n\n" +
-             "Dạo này nhiều chuyện xảy ra quá nên giờ em mới chúc mừng anh ngày 6/4 được hiccc 🥺\n\n" +
-             "Chúc Hải Long ngày quốc tế nam giới vui vẻ, hạnh phúc và lun iu emmm 💕";
+             "Dạo này nhiều chuyện xảy ra quá nên giờ em mới\n\n" + 
+              "chúc mừng anh ngày 6/4 được hiccc 🥺\n\n" +
+               "Chúc Hải Long ngày quốc tế nam giới vui vẻ,\n\n" +
+              "hạnh phúc và lun iu emmm 💕";
 
 const captions = [
   "2000","2010","2012","2015","2016","2017",
