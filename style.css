@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradient {
+  0% {background-position: 0%;}
+  50% {background-position: 100%;}
+  100% {background-position: 0%;}
+}
+
+/* 🎁 intro */
+#intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.gift-box {
+  font-size: 100px;
+}
+
+/* 💥 bung quà */
+.gift-box {
+  font-size: clamp(120px, 25vw, 250px); /* 👈 auto đẹp mọi màn hình */
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+@keyframes pop {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.5) rotate(15deg); }
+  100% { transform: scale(0) rotate(30deg); opacity: 0; }
+}
+
+/* ẩn ban đầu */
+#content, #love {
+  display: none;
+}
+
+/* container */
+.container {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+/* 📸 slideshow */
+.slideshow {
+  width: 260px;
+  height: 260px;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* 💌 text */
+#text {
+  white-space: pre-line;
+  margin-top: 10px;
+  line-height: 1.8;
+  font-size: 18px;
+
+  word-break: keep-all;   /* 👈 KHÔNG cho bẻ chữ */
+  overflow-wrap: normal;  /* 👈 chỉ xuống dòng khi cần */
+}
+
+/* 💥 chữ rung */
+.shake {
+  display: inline-block;
+  animation: shake 0.5s infinite;
+  white-space: pre; /* 👈 thêm dòng này */
+}
+
+@keyframes shake {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 1px); }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+/* ❤️ */
+.love-text {
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  margin-top: 20px;
+}
+
+.from {
+  text-align: center;
+  color: white;
+}
+
+/* 💕 hearts */
+.heart {
+  position: absolute;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(100vh);}
+  100% {transform: translateY(-10vh);}
+}
+
+.message-box {
+  background: white;
+  color: #ff4d6d;
+
+  padding: 25px 30px;      /* 👈 to hơn */
+  border-radius: 25px;
+
+  width: 90%;              /* 👈 rộng hơn */
+  max-width: 400px;
+
+  margin: 30px auto;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  text-align: center;
+
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#intro button {
+  font-size: clamp(18px, 4vw, 28px); /* 👈 tự scale */
+  padding: 15px 35px;
+
+  border-radius: 40px;
+  border: none;
+
+  background: white;
+  color: #ff4d6d;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
